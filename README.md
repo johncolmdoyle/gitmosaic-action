@@ -1,23 +1,17 @@
-# Hello world javascript action
+# Git Mosaic
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
+Have commits on the repository count on gitmosaic.com, th emore commits, the more of the repo owner's avatar will be displayed.
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-with:
-  who-to-greet: 'Mona the Octocat'
+on: [push]
+
+jobs:
+  mosaic:
+    runs-on: ubuntu-latest
+    name: GitMosaic Commit
+    steps:
+      - name: GitMosaic Log
+        uses: johncolmdoyle/gitmosaic-action@v1.2
 ```
