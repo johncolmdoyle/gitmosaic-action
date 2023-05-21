@@ -13,5 +13,5 @@ jobs:
     name: GitMosaic Commit
     steps:
       - name: GitMosaic Log
-        uses: johncolmdoyle/gitmosaic-action@v1.3
+        uses: johncolmdoyle/gitmosaic-action@v1.5
 ```
